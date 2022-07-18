@@ -23,6 +23,13 @@ export const HeroComponet = styled.section`
          z-index: 2;
          
      }
+
+     @media (min-width: 1024px){
+        &::after{
+            border-bottom: 65px solid var(--color-white);
+        }
+        
+     }
         
      svg{
         position: absolute;
@@ -81,3 +88,13 @@ export const MustangContainer = styled.div`
         left: 138px;
      }
 `
+
+export const Crazy = styled.div`
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    
+`
+

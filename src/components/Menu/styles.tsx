@@ -5,11 +5,12 @@ export const Container = styled.nav`
     align-items: center;
     position: fixed;
     z-index: 5;
-    padding-top: 24px;
+    padding: 24px;
     img{
         background-color: var(--color-primary);
         border: none;
         width: 48px;
+        margin-bottom: 48px;
     }
 
     .icon {
@@ -77,6 +78,7 @@ export const Container = styled.nav`
                     left: 0;
                     width: 100%;
                     justify-content: center;
+                    padding: 24px 32px;
                 }
             }
 
@@ -95,6 +97,12 @@ export const Container = styled.nav`
         }
 
         @media (min-width: 1024px) {
+            
+            padding: 32px;
+
+            img{
+                margin: 0;
+            }
             .icon{
                 display: none;
             }
@@ -107,7 +115,7 @@ export const Container = styled.nav`
 export const ListWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    padding: 45px 0 0;
+    padding: 40px 0 0;
     flex-wrap: nowrap; 
     // background: var(--color-white);
     font-size: var(--font-size-md);
@@ -125,10 +133,7 @@ export const ListWrapper = styled.div`
 export const List = styled.ul`
     padding: 0;
     list-style: none;
-    
-    a{
-        text-decoration: none;
-    }
+    margin: 0;
 
     @media (min-width: 1024px) {
         list-style: none;
@@ -145,16 +150,43 @@ export const List = styled.ul`
 
 export const ListItem =styled.li`
         cursor: pointer;
-        padding-bottom: 32px;
+        padding-bottom: 32px; 
         &:hover{
             font-weight: 700;
         }
 
+        a{
+            text-decoration: none;
+            color: var(--color-primary);
+            display: flex;
+        }
+        
+
         @media (min-width: 1024px){
             display: block;
+            a{
+                display: flex;
+                color: var(--color-white);
+            }
+
             padding: 0 48px;
                 &:hover{
                 font-weight: 700;
                 }
+
+            svg{
+                margin-left: 15px;
+            }
         }
+`
+
+export const BackDrop = styled.div`
+    &.active{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
 `

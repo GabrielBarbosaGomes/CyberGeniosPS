@@ -1,4 +1,4 @@
-import {Container, ListWrapper, List, ListItem} from "./styles";
+import {Container, ListWrapper, List, ListItem, BackDrop} from "./styles";
 import { Icon } from '@iconify/react';
 import Vector from "../../assets/imagens/Vector.png"
 import { useState } from "react";
@@ -26,11 +26,12 @@ export function Menu(){
                             <ListItem><a href="#">Sobre</a></ListItem>
                             <ListItem><a href="#">Tabela</a></ListItem>
                             <ListItem><a href="#">Fale conosco</a></ListItem>
-                            <ListItem><a href="#">Entrar <Icon icon="ant-design:user-outlined" color="#ebeff2"/></a></ListItem>
+                            <ListItem><a href="#">Entrar <Icon icon="ant-design:user-outlined" color="#ebeff2" id="enter" /></a></ListItem>
                         </List>
                         
                     </ListWrapper>
-                </div>            
+                </div> 
+                <BackDrop onClick={toggleMode} className={active ? 'active' : ''} />           
         </Container>
     )
 }
