@@ -29,7 +29,7 @@ export function Card(props: any){
                 <Paragraph>{props.people}</Paragraph>
             </IconText>
 
-            <Button borderRadius="21px">
+            <Button borderRadius="21px" >
                 Ver Carro
             </Button>
             

@@ -30,6 +30,12 @@ export const HeroComponet = styled.section`
         }
         
      }
+
+     @media (min-width: 1440px) {
+        &::after{
+            border-bottom: 90px solid var(--color-white);
+        }
+    }
         
      svg{
         position: absolute;
@@ -61,6 +67,11 @@ export const ImageHero= styled.img`
     @media (min-width: 1024px) {
         height: 700px;
     }
+
+    @media (min-width: 1440px) {
+        height: 960px;
+    }
+
 `
 
 export const MustangContainer = styled.div`

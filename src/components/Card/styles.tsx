@@ -6,7 +6,7 @@ export const CardComponent = styled.div`
     max-width: 278px;
     box-sizing: border-box;
     text-align: center;
-    padding: 24px 24px;
+    padding: 24px 34px;
     position: relative;
     margin: 0 auto;
 `

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.nav`
     display: flex;
     align-items: center;
@@ -159,6 +160,10 @@ export const ListItem =styled.li`
             text-decoration: none;
             color: var(--color-primary);
             display: flex;
+
+            svg{
+                display: none;
+            }
         }
         
 
@@ -167,16 +172,17 @@ export const ListItem =styled.li`
             a{
                 display: flex;
                 color: var(--color-white);
+                
+                svg{
+                margin-left: 15px;
+                display: flex;
+            }
             }
 
             padding: 0 48px;
                 &:hover{
                 font-weight: 700;
-                }
-
-            svg{
-                margin-left: 15px;
-            }
+                }            
         }
 `
 

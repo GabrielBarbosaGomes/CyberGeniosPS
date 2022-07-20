@@ -16,7 +16,7 @@ export function Home() {
   return (      
       <Layout>
         <Hero />
-        {/* <Cars /> */}
+        <Cars />
       </Layout>
   )
 }
