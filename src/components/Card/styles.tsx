@@ -9,6 +9,11 @@ export const CardComponent = styled.div`
     padding: 24px 34px;
     position: relative;
     margin: 0 auto;
+
+    .btn{
+        padding: 12px 40px;
+        min-width: 100%;
+    }
 `
 
 export const IconText = styled.div`
@@ -23,8 +28,10 @@ export const Paragraph = styled.p`
 `
 export const ImageCard = styled.img`
     position: absolute;
-    width: ${props => props.vw};
-    height: ${props => props.vh};
-    top: ${props => props.Y};
-    left: ${props => props.X};
+    width: auto;
+    height: 185px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
 `
+

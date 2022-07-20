@@ -9,16 +9,13 @@ export const CarsComponent= styled.section`
     align-items: center;
     justify-content: space-around;
 
-    /* .rec-arrow-left{
+    .rec-dot{
         display: none;
     }
 
-    .rec-arrow-right{
-        display: none;
-    } */
-
-    .rec-dot{
-        display: none;
+    .rec-item-wrapper{
+        padding-top: 100px !important;
+        overflow-x: hidden;
     }
 
     @media (min-width: 1024px) {

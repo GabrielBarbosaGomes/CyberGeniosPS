@@ -9,6 +9,9 @@ export const ButtonComponent = styled.button`
         display: block;
         background: transparent;
         font-weight: 500;
+        z-index: 2;
+        
+        
         &:hover{
             background: var(--color-primary);
             color: var(--color-white);

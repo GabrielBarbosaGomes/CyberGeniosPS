@@ -6,6 +6,8 @@ import image16 from '../../assets/imagens/image16.png';
 import image15 from '../../assets/imagens/image15.png';
 import carOne from '../../assets/imagens/image 22.png';
 import { Arrow } from "../Arrow";
+import { gql, useQuery } from "@apollo/client";
+
 
 
     const ListCars= [
@@ -209,21 +211,46 @@ import { Arrow } from "../Arrow";
         },
     ]
 
-export function Cars(ListCar: any){
+
+const GET_CAR_QUERY = gql`
+    query {
+        cars {
+            id
+            kmH
+            people
+            lightning
+            carYear
+            imageCar {
+                url
+              }
+          
+        }
+        
+    }
+`
+// interface Car {
+//     id: string;
+//     carYear: string;
+
+// }
+
+export function Cars(){
+    const {data} = useQuery(GET_CAR_QUERY)
+    console.log(data)
+    console.log(data?.cars)
 
     const BreakPoints= [
         {width: 1, itemsToShow: 1},
-        {width: 550, itemsToShow: 2, itemsToScroll: 2},
-        {width: 768, itemsToShow: 3},
-        {width: 1200, itemsToShow: 4},
+        {width: 550, itemsToShow: 2, itemsToScroll: 2, itemPadding: [0, 50]},
+        {width: 768, itemsToShow: 3, itemsToScroll: 3, itemPadding: [0, 50]},
     ]
 
     return(
         <CarsComponent className="paddingContainer">
-            <Carousel itemPadding={[0, 50]} renderArrow={Arrow} breakPoints={BreakPoints}>            
+             <Carousel renderArrow={Arrow} breakPoints={BreakPoints}>            
 
-                {ListCars.map((car) => (
-                <Card key={car.image} image={car.image} vw={car.vw} vh={car.vh} eixoX={car.eixoX} data={car.data} kmH={car.kmH} raio={car.raio} people={car.people}>Honda Aversa</Card>
+                {data?.cars.map((car: any) => (
+                <Card key={car.id} image={car.imageCar.url} /*vw={car.vw} vh={car.vh} eixoX={car.eixoX}*/ data={car.carYear} kmH={car.kmH} raio={car.lightning} people={car.people}>Honda Aversa</Card>
                 ))}
 
             </Carousel>
