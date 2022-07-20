@@ -7,9 +7,11 @@ export const ButtonComponent = styled.button`
         cursor: pointer;
         padding: ${props => props.padding || "12px 72px"};
         display: block;
-        // width: 100%;
         background: transparent;
         font-weight: 500;
+        z-index: 2;
+        
+        
         &:hover{
             background: var(--color-primary);
             color: var(--color-white);

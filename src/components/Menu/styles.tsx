@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 export const Container = styled.nav`
     display: flex;
     align-items: center;
@@ -79,6 +80,8 @@ export const Container = styled.nav`
                     width: 100%;
                     justify-content: center;
                     padding: 24px 32px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                    box-shadow: 0px -6px 20px black;
                 }
             }
 
@@ -94,6 +97,11 @@ export const Container = styled.nav`
             top: 0;
             z-index: 1000;
             width: max-content;
+        }
+
+        .scroll{
+            position: absolute;
+            top: 0;
         }
 
         @media (min-width: 1024px) {
@@ -128,6 +136,21 @@ export const ListWrapper = styled.div`
             flex-direction: row;
             width: 100%;
         }
+
+    svg{
+        width: 48px;
+        margin-bottom: 48px;
+
+        path{
+            @media (min-width: 1024px){
+                fill: #fff;
+            }
+        }
+
+        @media (min-width: 1024px){
+            margin-bottom: 0;
+        }
+    }
 `
 
 export const List = styled.ul`
@@ -159,6 +182,10 @@ export const ListItem =styled.li`
             text-decoration: none;
             color: var(--color-primary);
             display: flex;
+
+            svg{
+                display: none;
+            }
         }
         
 
@@ -167,16 +194,17 @@ export const ListItem =styled.li`
             a{
                 display: flex;
                 color: var(--color-white);
+                
+                svg{
+                margin-left: 15px;
+                display: flex;
+            }
             }
 
             padding: 0 48px;
                 &:hover{
                 font-weight: 700;
-                }
-
-            svg{
-                margin-left: 15px;
-            }
+                }            
         }
 `
 
@@ -188,5 +216,26 @@ export const BackDrop = styled.div`
         left: 0;
         right: 0;
         background-color: rgba(0, 0, 0, 0.2);
+    }
+`
+
+export const BackgroundHeader = styled.div`
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--color-primary);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-100%);
+    padding: 24px 0;
+    z-index: -1;
+    
+    &.translate {
+        transform: none;
+    }
+
+    @media (max-width: 1023px){
+        display: none;
     }
 `
