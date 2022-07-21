@@ -220,6 +220,7 @@ const GET_CAR_QUERY = gql`
             people
             lightning
             carYear
+            name
             imageCar {
                 url
               }
@@ -250,7 +251,7 @@ export function Cars(){
              <Carousel renderArrow={Arrow} breakPoints={BreakPoints}>            
 
                 {data?.cars.map((car: any) => (
-                <Card key={car.id} image={car.imageCar.url} /*vw={car.vw} vh={car.vh} eixoX={car.eixoX}*/ data={car.carYear} kmH={car.kmH} raio={car.lightning} people={car.people}>Honda Aversa</Card>
+                <Card key={car.id} image={car.imageCar.url != "" ? car.imageCar.url : image15 } /*vw={car.vw} vh={car.vh} eixoX={car.eixoX}*/ data={car.carYear} kmH={car.kmH} raio={car.lightning} people={car.people}>{car.name}</Card>
                 ))}
 
             </Carousel>

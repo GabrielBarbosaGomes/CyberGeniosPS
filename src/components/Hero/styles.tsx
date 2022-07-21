@@ -6,7 +6,7 @@ export const HeroComponet = styled.section`
     // border-radius: 0 0px 20px 20px;
     // clip-path: circle(112vh at 50% -80vh);
     overflow: hidden;
-    margin-bottom: 150px;
+    margin-bottom: 90px;
     position: relative;
     /* circle { mix-blend-mode: screen; }  */
      &::after {
