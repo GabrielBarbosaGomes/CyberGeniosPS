@@ -19,7 +19,7 @@ export function Footer(props: any){
                         O Ford Mustang é um automóvel desportivo produzido pela Ford Motor Company. O carro foi apresentado ao público em 17 de abril de 1964 durante a New York World's Fair. O Mustang, apesar de ter sofrido grandes alterações ao longo dos anos é a mais antiga linha de automóveis da Ford.
                 </p>
             </LogLat>
-            <Button borderRadius="4px" padding="4px 56px" colorB="var(--color-white)" color="var(--color-white)">
+            <Button className= "btn" borderRadius="4px" padding="4px 56px" colorB="var(--color-white)" color="var(--color-white)">
                 Ver carros
             </Button>
         </FooterComponet>

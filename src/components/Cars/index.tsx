@@ -1,6 +1,6 @@
 import { Card } from "../Card";
 import { CarsComponent } from "./styles";
-import Carousel from "react-elastic-carousel";
+import Carousel from '@itseasy21/react-elastic-carousel';
 import mustang from '../../assets/imagens/image11.png';
 import image16 from '../../assets/imagens/image16.png';
 import image15 from '../../assets/imagens/image15.png';
@@ -248,10 +248,10 @@ export function Cars(){
 
     return(
         <CarsComponent className="paddingContainer">
-             <Carousel renderArrow={Arrow} breakPoints={BreakPoints}>            
+             <Carousel isRTL={false} enableAutoPlay autoPlaySpeed={5000} renderArrow={Arrow} breakPoints={BreakPoints}>            
 
                 {data?.cars.map((car: any) => (
-                <Card key={car.id} image={car.imageCar.url != "" ? car.imageCar.url : image15 } /*vw={car.vw} vh={car.vh} eixoX={car.eixoX}*/ data={car.carYear} kmH={car.kmH} raio={car.lightning} people={car.people}>{car.name}</Card>
+                <Card key={car.id} image={car.imageCar.url != "" ? car.imageCar.url : image15 } data={car.carYear} kmH={car.kmH} raio={car.lightning} people={car.people}>{car.name}</Card>
                 ))}
 
             </Carousel>

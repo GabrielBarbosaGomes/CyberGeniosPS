@@ -6,7 +6,7 @@ import { Button } from '../Buttons';
 export function Card(props: any){
     return(
         <CardComponent>
-            <ImageCard src={props.image} vw={props.Vw} vh={props.Vh} X={props.eixoX} Y={props.eixoY} />
+            <ImageCard src={props.image} />
 
             <h2>{props.children}</h2>
             <IconText>
