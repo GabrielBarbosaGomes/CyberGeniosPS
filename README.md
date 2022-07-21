@@ -1,11 +1,11 @@
 # Cyber Gênios PS
 
-Projeto para o processo seltivo....
+Projeto para o processo seltivo...
 
 ## Estrutura
 
 * React 18.2.0
-* Typescript alguma coisa 4.6.4
+* Typescript 4.6.4
 
 ### yarn
 
