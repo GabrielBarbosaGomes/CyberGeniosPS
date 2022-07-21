@@ -2,13 +2,9 @@ import styled, {keyframes} from "styled-components";
 import imageHero from "../../assets/imagens/imageHero.png"
 
 export const HeroComponet = styled.section`
-    // background-attachment: fixed;
-    // border-radius: 0 0px 20px 20px;
-    // clip-path: circle(112vh at 50% -80vh);
     overflow: hidden;
     margin-bottom: 90px;
     position: relative;
-    /* circle { mix-blend-mode: screen; }  */
      &::after {
          content: "";
          position: absolute;
@@ -46,15 +42,6 @@ export const HeroComponet = styled.section`
         z-index: 4;
 
      }
-    // @media (min-width: 1023px){
-    //     clip-path: circle(170vh at 50% -80vh);
-    //     min-height: 657px;
-    // }
-
-    // @media (min-width: 1440px){
-    //     clip-path: circle(223vh at 50% -80vh);
-    //     min-height: 1100px;
-    // }
 `
 
 export const ImageHero= styled.img`
@@ -75,7 +62,6 @@ export const ImageHero= styled.img`
 `
 
 export const MustangContainer = styled.div`
-    /* circle { mix-blend-mode: screen; } */
     position: relative;
     z-index: 5;
     top: 50%;

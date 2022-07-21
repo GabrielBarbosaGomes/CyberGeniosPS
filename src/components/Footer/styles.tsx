@@ -14,7 +14,6 @@ export const FooterComponet = styled.footer`
     text-align: right;
     color: var(--color-white);
     line-height: 200%;
-    /* font-size: var(--font-size-md); */
     padding: 50px 24px 240px;
     font-weight: 300;
     position: relative;
