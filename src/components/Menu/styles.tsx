@@ -60,13 +60,11 @@ export const Container = styled.nav`
             top:0;
             background: transparent;
             transform: rotate(225deg);
-            /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); */
         } 
         &:before{
             top:0;
             background: transparent;
             transform: rotate(135deg);
-            /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); */
         }
     }  
         .menu{
@@ -125,7 +123,6 @@ export const ListWrapper = styled.div`
     flex-direction: column;
     padding: 40px 0 0;
     flex-wrap: nowrap; 
-    // background: var(--color-white);
     font-size: var(--font-size-md);
     font-weight: 500;
         @media (min-width: 1024px){
