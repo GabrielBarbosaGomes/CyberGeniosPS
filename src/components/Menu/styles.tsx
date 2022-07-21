@@ -236,6 +236,6 @@ export const BackgroundHeader = styled.div`
     }
 
     @media (max-width: 1023px){
-        display: none;
+        height: 40px;
     }
 `

@@ -10,6 +10,10 @@ export const CardComponent = styled.div`
     position: relative;
     margin: 0 auto;
 
+    h2{
+        font-weight: 400;
+    }
+
     .btn{
         padding: 12px 40px;
         min-width: 100%;

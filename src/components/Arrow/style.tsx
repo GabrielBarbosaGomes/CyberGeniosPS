@@ -8,6 +8,10 @@ export const ArrowComponent = styled.button`
     font-size: 41px;
 
     @media (min-width: 1024px) {
-            display: block;
-        } 
+        display: block;
+    } 
+    
+    &:first-child {
+        transform: scaleX(-1);
+    }
 `
