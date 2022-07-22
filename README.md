@@ -18,9 +18,11 @@ Na primeira execução, execute os seguintes comandos:
 ### Pastas
 
 * criei uma pasta components e nela criei components reutilizáveis e os principais:
+
     *reutilizáveis: buttons, inputs, card, arrow;
+    
     *principais: hero, menu, cars, footer;
 - cada pasta possui seu styled para a aplicação do styled-components
 
-* crie a pasta lib pois nela que criei um arquivo para pegar as informações do api para o carousel, 
+* criei a pasta lib pois nela que criei um arquivo para pegar as informações do api para o carousel, 
   e tambem criei um cache que o hook apollo possui, para guardar as informações que ja foi recolhida da api
